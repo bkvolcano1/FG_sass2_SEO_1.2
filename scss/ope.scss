@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Roboto+Slab:wght@300;400&family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&family=Roboto:ital@1&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.nav{
+    display: flex;
+    justify-content: end;
+}
+
+
+body{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    flex-direction: column;
+    display: flex;  
+}
+
+header{
+    font-size: large;
+    display: grid;
+    justify-content: center;
+    
+    
+}
+header:hover{
+    transform: scale(2);
+}
+
+header, h2{
+    font-family: 'Roboto Slab', serif;
+    color: whitesmoke;
+}
+nav ul li{
+    font-family: 'Cairo', sans-serif;
+    list-style-type: none;
+
+}
+footer{
+    padding: 3em;
+    background-color:black;
+    margin-bottom: 0;
+    margin-top: 1.5em;
+}
+.ad{
+    color: snow;
+}
+.contenido{
+    color: snow;
+}
+
+header{
+    grid-area: header;
+}
+nav{
+    grid-area: nav;
+}
+
+.contenido{
+    grid-area: contenido;
+}
+.ad{
+    grid-area: ad;
+}
+
+
+.galeria{
+    grid-area: galeria;
+
+}
+.galeriafotos{
+    grid-area: galeriafotos;
+}
+
+footer{
+    grid-area: footer;
+}
+.envoltura{
+    background-color: rgb(21, 49, 77);
+    margin-bottom: 1.5em;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "contenido"
+    "ad"
+    "galeria"
+    "footer";
+    gap: 20px;
+}
+
+.envolturagaleria{
+    background-color: rgb(21, 49, 77);
+    margin-bottom: 1.5em;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav";
+    gap: 20px;
+
+}
+.envolturacontacto{
+    background-color: rgb(21, 49, 77);
+    margin-bottom: 1.5em;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav";
+    gap: 20px;
+
+}
+.envolturahistoria{
+    background-color: rgb(21, 49, 77);
+    margin-bottom: 1.5em;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav";
+    gap: 20px;
+
+}
+.envolturaservicios{
+    background-color: rgb(21, 49, 77);
+    margin-bottom: 1.5em;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav";
+    gap: 20px;
+
+}
+
+.galeria{
+    background-color: rgba(86, 125, 158, 0.952);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+    justify-items: center;
+}
+.galeriafotos{
+    background-color: rgba(86, 125, 158, 0.952);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+    justify-items: center;
+}
+img{
+    border: 8px solid black;
+    margin-top: 15px;
+}
+@mixin sizes ($width,$height){
+    height: $height;
+    width: $width;  
+}
+iframe{
+    border: 8px solid black;
+    @include sizes (340px,151.4px);
+    margin-top: 15px;
+
+}
+.cincotragos img{
+    @include sizes (340px,151.4px);  
+}
+.doswhiskys img{
+    @include sizes (340px,226.6px);  
+}
+.fcoca img{
+    @include sizes (340px,224.6px);
+}
+.cervezasgroup img{
+    @include sizes (340px,226.5px);
+}
+
+.portillotinto img{
+    width: 300px;
+
+}
+.whiskydany img{
+    width: 300px;
+}
+.vodka img{
+    width: 300px;
+}
+.heineken img{
+    width: 300px;
+}
+.fernete img{
+    width: 300px;
+}
+
+footer{
+    margin-top: 0px;
+}
+
+@media (min-width:500px){
+    .envoltura{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "contenido"
+        "ad"
+        "galeria"
+        "footer"; 
+
+    }
+    .envolturacontacto{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav";
+        
+    }
+    .envolturagaleria{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav";
+        gap: 20px;
+    
+    }
+
+    .envolturahistoria{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav";
+        
+    }
+    .envolturaservicios{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav";
+        
+    }
+
+    .galeria{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 15px;
+        justify-items: center;
+
+    }
+    .galeriafotos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 15px;
+        justify-items: center;
+    }
+    img{
+        border: 8px solid black;
+        margin-top: 15px;
+    }
+    @mixin sizes500 ($width,$height,$margin-top){
+        height: $height;
+        width: $width;
+        margin-top: $margin-top;   
+    }
+    iframe{
+        @include sizes500 (490px,221.5px,15px);
+        border: 8px solid black;
+    }
+    .cincotragos img{
+        @include sizes500 (490px,221.5px,0px);  
+    }
+    .doswhiskys img{
+        @include sizes500 (490px,326.7px,0px);   
+    }
+    .fcoca img{
+        @include sizes500 (490px,326.6px,0px);
+    }
+    .cervezasgroup img{
+        @include sizes500 (490px,326px,0px);
+    }
+    footer{
+        margin-top: 0px;
+    }
+    
+}
+
+
+@media (min-width:768px){
+    .envoltura{
+        margin-bottom: 1.5em;
+        grid-template-columns: 1fr 9fr 1fr;
+        grid-template-areas:
+        "header header    header"
+        "contenido      contenido nav"
+        
+        "ad     ad        ad"
+        "galeria galeria galeria"
+        "footer   footer     footer"; 
+
+    }
+    .envolturacontacto{
+        margin-bottom: 1.5em;
+        grid-template-columns: 1fr 9fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "nav    nav nav";
+        gap: 20px;
+
+    }
+    .envolturagaleria{
+        margin-bottom: 1.5em;
+        grid-template-areas: 
+        "header"
+        "nav";
+        gap: 20px;
+    
+    }
+    .envolturahistoria{
+        margin-bottom: 1.5em;
+        grid-template-areas: 
+        "header"
+        "nav";
+        gap: 20px;
+    
+    }
+    .envolturaservicios{
+        margin-bottom: 1.5em;
+        grid-template-areas: 
+        "header"
+        "nav";
+        gap: 20px;
+    
+    }
+    .gridsgalerias{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 15px;
+        justify-items: center;
+
+    }
+    .galeria{
+        @extend .gridsgalerias;
+    }
+    .galeriafotos{
+        @extend .gridsgalerias;
+
+    }
+
+    @mixin sizes768 ($width,$height,$margin-top){
+        height: $height;
+        width: $width;
+        margin-top: $margin-top   
+    }
+    .cincotragos img{
+        @include sizes768 (760px,343px,18px);
+    }
+    .doswhiskys img{
+        @include sizes768 (760px,506px,18px);
+    }
+    .fcoca img{
+        @include sizes768 (760px,504px,18px);
+
+    }
+    .cervezasgroup img{
+        @include sizes768 (760px,503px,18px);
+    }
+    
+    iframe{
+        @include sizes768 (760px,343px,18px);
+    }
+    .portillotinto img{
+        width: 400;
+
+    }
+   
+    .vodka img{
+        width: 400;
+        
+    }
+    .heineken img{
+        width: 400;
+        
+    }
+    
+
+    footer{
+        margin-top: 0px;
+    }
+
+    
+}
+
+@media (min-width:1024px){
+    .galeria{
+        background-color: rgba(86, 125, 158, 0.952);
+    }
+    .galeriafotos{
+        background-color: rgba(86, 125, 158, 0.952);
+        display: flex;
+        justify-content: center;
+
+    }
+    @mixin sizes1024 ($width,$height,$margin-top){
+        height: $height;
+        width: $width;
+        margin-top: $margin-top
+        
+    }
+    .cincotragos img{
+        @include sizes1024 (1016px,459px,18px);
+    }
+    
+    .doswhiskys img{
+        @include sizes1024(1016px,677px,18px)
+    }
+    .fcoca img{
+        @include sizes1024(1016px,674px,18px)
+    }
+    .cervezasgroup img{
+        @include sizes1024(1016px,675px,18px)
+
+    }
+    
+    iframe{
+        @include sizes1024(1016px,459px,18px)
+    }
+    footer{
+        margin-top: 0px;
+    }
+    
+    .portillotinto img{
+        width: 300px;
+        
+        
+
+    }
+    .vodka img{
+        width: 300px; 
+    }
+    .heineken img{
+        width: 300px;   
+    }
+    .fernet{
+        background-color: rgba(86, 125, 158, 0.952);
+        display: flex;
+        justify-content: end;  
+    }
+    .fernet img{
+        width: 300px;
+    }
+    
+    .wisp img{
+        display: flex;
+        justify-content: center;
+        width: 600px;
+    }
+    
+    
+
+
+    
+}
